@@ -1,7 +1,7 @@
 ---
 title: WireUp
 description: Database diagram tool ⚡
-thumbnail: /projects/wireup/Thumbnail.webp
+thumbnail: /projects/wireup/thumbnail.webp
 github: https://github.com/Morten010/wireup
 link: https://wireup.mortenra.com/
 lang: en

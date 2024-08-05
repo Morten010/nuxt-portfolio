@@ -2,8 +2,6 @@
 
 const { data: projects } = await useAsyncData('projects', () => queryContent('/').only(['title', 'thumbnail', 'description', '_path']).find())
 
-console.log(projects.value)
-
 </script>
 
 <template>
@@ -49,7 +47,7 @@ console.log(projects.value)
   <div
       class="py-[30px]"
     >
-      <UiProjectCard 
+    <UiProjectCard 
       v-for="project of projects"
       :image="project.thumbnail"
       :title="project.title!"

@@ -24,7 +24,7 @@
           fill
           :src='image'
           alt='map project'
-          className='object-cover'
+          className='object-cover absolute'
         />
     </div>
     <div 
