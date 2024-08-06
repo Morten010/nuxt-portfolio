@@ -1,9 +1,40 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const isActive = ref(true); 
+
+function handleUpdateIsActive(newValue: boolean) {
+  isActive.value = newValue;
+}
+</script>
+
 <template>
+  <Transition mode="out-in">
+    <StartingPage 
+      :isActive="isActive" 
+      @update:isActive="handleUpdateIsActive" 
+      v-if="isActive"
+    />
+  </Transition>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
 </template>
 
+<!-- scoped css -->
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateY(-100%);
+}
+</style>
+
+<!-- global css -->
 <style>
 @tailwind base;
 @tailwind components;

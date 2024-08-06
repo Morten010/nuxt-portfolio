@@ -65,3 +65,26 @@ export const skills: {
         icon: 'self:cypress'
     }
 ]
+
+export const helloTranslations = [
+    'Hello',
+    'Hej',
+    'Hola',
+    'Bonjour',
+    'Hallo',
+    'Ciao',
+    'Olá',
+    'Hallo',
+    'Hej',
+    'Hallo',
+    'Hei',
+    'Здравствуйте',
+    'こんにちは',
+    '你好',
+    '안녕하세요',
+    'مرحبا',
+    'Merhaba',
+    'Γειά σου',
+    'नमस्ते',
+    'হ্যালো'
+];
