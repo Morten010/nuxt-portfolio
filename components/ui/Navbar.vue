@@ -3,7 +3,7 @@
 
 <template>
   <nav 
-    className='nav card items-center !pt-3'
+    class='nav card items-center !pt-3'
     >
         <NuxtLink
             href="/"
@@ -21,16 +21,16 @@
         </NuxtLink>
        
         <!-- seperator line  -->
-        <!-- <div className='border-b border-[#47484B]'></div> -->
+        <!-- <div class='border-b border-[#47484B]'></div> -->
         <!-- seperator line  -->
 
         <!-- seperator line  -->
-        <div className='border-b border-[#47484B] w-full'></div>
+        <div class='border-b border-[#47484B] w-full'></div>
         <!-- seperator line  -->
 
         <NuxtLink
         href="https://www.linkedin.com/in/morten-rasmussen-269564182/"
-        className="px-2 py-1 hover:text-white transition-colors duration-100"
+        class="px-2 py-1 hover:text-white transition-colors duration-100"
         target='_blank'
         aria-label="Linkedin"
         >
@@ -38,7 +38,7 @@
         </NuxtLink>
         <NuxtLink
         href="https://github.com/Morten010"
-        className="px-2 py-1 hover:text-white transition-colors duration-100"
+        class="px-2 py-1 hover:text-white transition-colors duration-100"
         target='_blank'
         >
             <Icon name="bi:github" />

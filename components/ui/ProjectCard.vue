@@ -12,28 +12,28 @@
 <template>
   <NuxtLink
   :href='`/projects/wireup`'
-  :className="cn(
-    'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative max-w-[350px] w-full flex-grow',
+  :class="cn(
+    'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative sm:w-full flex-grow',
     classes
   )"
   >
   <div
-    className='w-full h-full aspect-video relative rounded-2xl overflow-hidden'
+    class='w-full aspect-video relative rounded-2xl overflow-hidden'
     >
         <NuxtImg
           fill
           :src='image'
           alt='map project'
-          className='object-cover absolute'
+          class='object-cover absolute'
         />
     </div>
     <div 
-    className='flex py-2 px-4 gap-3 items-center z-10'
+    class='flex py-2 px-4 gap-3 items-center z-10'
     >
-        <!-- <FaRulerCombined className='icons'/> -->
+        <!-- <FaRulerCombined class='icons'/> -->
         <div>
             <h3
-            className='font-semibold'
+            class='font-semibold'
             >
                 {{ title }}
             </h3>
