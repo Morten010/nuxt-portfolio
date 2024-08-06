@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-
 const { data: projects } = await useAsyncData('projects', () => queryContent('/').only(['title', 'thumbnail', 'description', '_path']).find())
 
 </script>
@@ -27,11 +26,14 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/'
     <aside
     class='w-full sm:w-[60%] relative min-h-[40vh] overflow-hidden'
     >
-      <NuxtImg
+      <!-- <NuxtImg
       src="/assets/pc.webp" 
       alt="pc" 
       fill priority
       class='absolute top-0 left-0 w-full h-full object-contain'
+      /> -->
+      <SvgsMap 
+        class="mx-auto"
       />
     </aside>
   </section>
