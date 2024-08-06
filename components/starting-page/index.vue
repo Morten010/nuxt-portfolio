@@ -36,8 +36,15 @@ onMounted(() => {
 
 <template>
   <div class="absolute top-0 left-0 w-full h-full bg-[#15161A] z-[1000] grid place-content-center">
-    <p class="list-disc list-item text-xl text-white">
-      {{ choosenWord ? choosenWord : 'Hello' }}
-    </p>
+    <div
+      class="flex gap-3 items-center"
+    >
+      <div 
+        class="w-4 h-4 rounded-full bg-white"
+      />
+      <p class="text-5xl  text-white">
+        {{ choosenWord ? choosenWord : 'Hello' }}
+      </p>
+    </div>
   </div>
 </template>
