@@ -5,7 +5,7 @@ import { skills } from '~/constants'
 
 <template>
   <div
-    class="flex gap-2 p-4 flex-wrap"
+    class="flex gap-2 p-4 flex-wrap justify-center"
   >
     <UiSkillCard 
       v-for="skill of skills"

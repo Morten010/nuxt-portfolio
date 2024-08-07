@@ -12,7 +12,7 @@
 
 <template>
     <div
-        class='h-14 w-14 min-h-[3.5rem] min-w-[3.5rem] border border-white/20 rounded-lg grid place-content-center relative'
+        class='h-14 w-14 min-h-[3.5rem] min-w-[3.5rem] border border-white/20 rounded-lg grid place-content-center relative text-white/20 hover:text-white transition-all duration-100'
         :aria-label="skill.name"
         @mouseenter="open = true"
         @mouseleave="open = false"
@@ -27,7 +27,7 @@
                 {{ skill.name }}
             </p>
         </Transition>
-        <Icon :name="skill.icon" class="text-white text-4xl" />
+        <Icon :name="skill.icon" class="text-4xl" />
     </div>
 </template>
 

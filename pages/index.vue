@@ -7,7 +7,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/'
  <div>
   <!-- hero section -->
   <section
-  class='flex p-4 w-full pr-2 flex-col sm:flex-row items-center'
+  class='flex p-4 w-full pr-2 flex-col sm:flex-row items-center pt-20'
   >
     <article
     class='w-full sm:w-[40%] flex flex-col gap-4'
@@ -39,10 +39,19 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/'
   </section>
   <!-- hero section -->
 
-  <section>
-    <h2 class='p-4 pb-0 text-2xl font-semibold'>
-      Skills
-    </h2>
+  <section
+    class="my-20 text-center"
+  > 
+    <div>
+      <p
+        class="jetBrain text-sm text-[#526FFF]"
+      >
+        some of my
+      </p>
+      <h2 class='text-5xl font-semibold'>
+        Skills
+      </h2>
+    </div>
     <UiSkillContainer />
   </section>
 
@@ -60,3 +69,9 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/'
 
  </div>
 </template>
+
+<style>
+.jetBrain{
+  font-family: "JetBrains Mono", monospace;
+}
+</style>

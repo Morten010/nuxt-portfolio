@@ -7,9 +7,11 @@
 </script>
 
 <template>
-  <div>
+  <div
+    class="pt-20"
+  >
     <h1
-      class='text-4xl font-bold inline-block mb-4'
+      class='text-4xl font-bold inline-block mb-4 w-full text-center'
       >
         My Projects
       </h1>

@@ -52,7 +52,7 @@ body{
   background-color: #15161A;  
   color: #fafafa;
   overflow-x: hidden;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 /* navbar */
