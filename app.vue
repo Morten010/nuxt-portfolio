@@ -53,6 +53,8 @@ body{
   color: #fafafa;
   overflow-x: hidden;
   font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 /* navbar */

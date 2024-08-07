@@ -19,6 +19,7 @@ function displayTranslations() {
       if (intervalId) {
         clearInterval(intervalId);
       }
+      document.body.style.overflow = "unset";
       emit('update:isActive', false); // Emit event to update isActive
     }
   };
