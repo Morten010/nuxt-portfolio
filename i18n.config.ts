@@ -7,7 +7,8 @@ export default defineI18nConfig(() => ({
       skillTitle: "Skills",
       skillSubTitle: "some of my",
       projectsTitle: "Projects",
-      projectsSubTitle: "Here are a few of my personal projects"
+      projectsSubTitle: "Here are a few of my personal projects",
+      projectsPageTitle: "My Projects"
     },
     da: {
       welcome: 'velkommen'

@@ -1,20 +1,27 @@
 <script setup lang="ts">
 const route = useRoute();
+const {
+  params: {
+    slug
+  }
+} = route
 
 const { data, error, refresh } = await useAsyncData(
   `content-${route.path}`,
-  () => queryContent().where({ _path: route.path }).findOne()
+  () => queryContent().where({ _path: `/projects/${slug}` }).findOne()
 );
 
 useHead({
   title: data.value?.title || "Project does not exist",
   titleTemplate: "%s | project",
 });
+
 </script>
 
 <template>
   <main
     class="w-full"
+    v-if="!error"
   >
     <section
       class="w-full aspect-video relative p-2 card-bg rounded-2xl overflow-hidden grid place-content-center mb-2"
@@ -54,7 +61,32 @@ useHead({
         </NuxtLink>
       </div>
       <!-- links -->
-    <ContentRenderer id="renderedContent" v-if="data" :value="data" />
+    <ContentRenderer 
+      id="renderedContent" 
+      v-if="data" 
+      :value="data" 
+    />
+  </main>
+
+  <main
+    class="h-screen w-full grid place-content-center"
+    v-if="error"
+  >
+    <h1
+      class='text-4xl font-bold inline-block w-full text-center'
+    >
+      Project not found
+    </h1>
+    <p
+      class="text-center text-white/35"
+    >
+      Go back <NuxtLink
+        to="/"
+        class="text-[#526FFF]"
+      >
+        Home
+      </NuxtLink> 
+    </p>
   </main>
 </template>
 
