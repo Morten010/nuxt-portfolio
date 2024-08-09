@@ -1,5 +1,6 @@
 <script setup lang='ts'>
   import { type ProjectCardProps } from '~/types'
+  import { ref, type VNodeRef } from "vue"
   const {
     classes,
     description,
@@ -7,16 +8,48 @@
     slugAsParams,
     title
   } = defineProps<ProjectCardProps>()
+    const parent = ref<VNodeRef | null>(null)
+  
+  const handleTrailer = (e: MouseEvent) => {
+    console.log("ran");
+    
+  if (parent.value) {
+    console.log(parent.value.style.opacity);
+    console.log(!parent.value.style.opacity);
+    console.log(!!parent.value.style.opacity);
+    
+    if(parent.value.style.opacity !== ''){
+      parent.value.style.opacity = 1
+    }
+    const rect = parent.value.getBoundingClientRect()
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top
+    
+    parent.value.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.05) 0%, rgba(27,28,31,0) 100%)`
+  }
+}
+
+const handleRemove = () => {
+  if (parent.value) {
+    parent.value.style.opacity = 0
+  }
+}
 </script>
 
 <template>
   <NuxtLink
   :href='`/projects/wireup`'
   :class="cn(
-    'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative sm:w-full flex-grow',
+    'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative sm:w-full flex-grow overflow-hidden',
     classes
   )"
+  @mousemove="handleTrailer"
+  @mouseleave="handleRemove"
   >
+  <div 
+    ref="parent"
+    class="absolute top-0 left-0 pointer-events-none w-full h-full transition-all duration-200"
+  />
   <div
     class='w-full aspect-video relative rounded-2xl overflow-hidden'
     >
