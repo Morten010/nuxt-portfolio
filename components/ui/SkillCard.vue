@@ -12,7 +12,7 @@
 
 <template>
     <div
-        class='h-14 w-14 min-h-[3.5rem] min-w-[3.5rem] border border-white/20 rounded-lg grid place-content-center relative text-white/20 hover:text-white transition-all duration-100'
+        class='h-14 w-14 min-h-[3.5rem] min-w-[3.5rem] border border-white/20 rounded-lg grid place-content-center relative text-white/20 hover:text-white transition-all duration-200 hover:-translate-y-2'
         :aria-label="skill.name"
         @mouseenter="open = true"
         @mouseleave="open = false"
