@@ -3,58 +3,59 @@
 
 <template>
     <div
-        class="fixed top-0 left-0 w-full p-4 z-50"
+        class="fixed top-0 left-0 w-full p-4 z-50 flex justify-center"
     >
-        <nav
-            class="flex gap-2 justify-between border border-[#3C3E4D]/85 bg-[#27272D/20] backdrop-blur-sm p-3 max-w-screen-xl mx-auto rounded items-end"
+        <div
+            class="bg-[#15161a]/85 rounded-full"
         >
-            <div
-                class="flex gap-3 items-end"
+            <nav
+                class="flex gap-1 justify-between border border-[#3C3E4D]/85 bg-[#27272D/20] backdrop-blur-sm p-2 max-w-screen-xl mx-auto rounded-full items-center"
             >
-                <h1
-                    class="text-2xl"
-                >
-                    Morten
-                </h1>
                 <NuxtLink
                     to="/"
-                    class="opacity-65 hover:opacity-100 transition-all duration-100"
+                    class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
                 >
-                    Home
+                    <Icon 
+                        class="w-6 h-6"
+                        name="self:home" 
+                    />
                 </NuxtLink>
                 <NuxtLink
                     to="/projects"
-                    class="opacity-65 hover:opacity-100 transition-all duration-100"
+                    class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
                 >
-                    Projects
+                    <Icon 
+                        class="w-6 h-6"
+                        name="self:projects" 
+                    />
                 </NuxtLink>
-            </div>
+                
+                <!-- divider -->
+                <div 
+                    class="h-[30px] border border-l border-white/10 inline-block"
+                />
+                <!-- divider -->
 
-            <div
-                class="flex gap-4 items-end"
-            >
                 <NuxtLink
-                href="https://www.linkedin.com/in/morten-rasmussen-269564182/"
-                class="text-[#AAAEB9] hover:text-white transition-colors duration-100"
-                target='_blank'
-                aria-label="Linkedin"
+                    to=""
+                    class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full"
                 >
-                    <Icon name="bi:linkedin" size="20" />
+                    <Icon 
+                        name="uiw:github" 
+                        class="w-5 h-5"
+                    />
                 </NuxtLink>
                 <NuxtLink
-                href="https://github.com/Morten010"
-                class="text-[#AAAEB9] hover:text-white transition-colors duration-100"
-                target='_blank'
+                    to=""
+                    class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full mr-2"
                 >
-                    <Icon name="bi:github" size="20" />
+                    <Icon 
+                        name="uiw:linkedin" 
+                        class="w-5 h-5"
+                    />
                 </NuxtLink>
-                <a
-                    href="mailto:itismorten@outlook.com"
-                    class="py-1 px-2 bg-[#526FFF] hover:bg-[#526FFF]/60 rounded font-medium transition-colors duration-100"
-                >
-                    Contact Me
-                </a>
-            </div>
-        </nav>
+                
+            </nav>
+        </div>
     </div>
 </template>

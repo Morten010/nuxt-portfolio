@@ -1,6 +1,7 @@
 <script setup lang='ts'>
   import { type ProjectCardProps } from '~/types'
   import { ref, type VNodeRef } from "vue"
+  import { cn } from "~/utils"
   const {
     classes,
     description,

@@ -24,11 +24,15 @@ export default defineNuxtConfig({
       }
     }
   },
+  i18n: {
+    vueI18n: './i18n.config.ts'
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/icon",
-    "@nuxt/fonts"
+    "@nuxt/fonts",
+    "@nuxtjs/i18n"
   ]
 })

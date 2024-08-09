@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const { data: projects } = await useAsyncData('projects', () => queryContent('/').only(['title', 'thumbnail', 'description', '_path']).find())
+  const { data: projects } = await useAsyncData('projects', () => queryContent('/').only(['title', 'thumbnail', 'description', '_path']).find())
 
 </script>
 
@@ -18,20 +18,14 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/'
         Morten Rasmussen
       </h1>
       <p
-      class='text-lg'
+      class='text-lg text-white/35'
       >
-        Web developer specializing in full-stack development. With the help of HTML, CSS, JavaScript, React, Next.js, Node.js, and MySQL
+        {{ $t('heroSubTitle') }}
       </p>
     </article>
     <aside
     class='w-full sm:w-[60%] relative min-h-[40vh] overflow-hidden'
     >
-      <!-- <NuxtImg
-      src="/assets/pc.webp" 
-      alt="pc" 
-      fill priority
-      class='absolute top-0 left-0 w-full h-full object-contain'
-      /> -->
       <SvgsMap 
         class="mx-auto"
       />
@@ -46,16 +40,27 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/'
       <p
         class="jetBrain text-sm text-[#526FFF]"
       >
-        some of my
+        {{ $t('skillSubTitle') }}
       </p>
       <h2 class='text-5xl font-semibold'>
-        Skills
+        {{ $t('skillTitle') }}
       </h2>
     </div>
     <UiSkillContainer />
   </section>
 
-  <div
+  <section>
+    <h2
+      class='text-5xl font-semibold text-center'
+    >
+      {{ $t('projectsTitle') }}
+    </h2>
+    <p
+      class="jetBrain text-sm text-white/35 text-center font-light mt-2"
+    >
+      {{ $t('projectsSubTitle') }}
+    </p>
+    <div
       class="py-[30px] grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2"
     >
     <UiProjectCard 
@@ -66,6 +71,7 @@ const { data: projects } = await useAsyncData('projects', () => queryContent('/'
       :slug-as-params="project._path!.replace('/projects/', '')"
     />
   </div>
+  </section>
 
  </div>
 </template>

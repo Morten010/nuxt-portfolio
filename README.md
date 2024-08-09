@@ -2,8 +2,8 @@
 
 transferring portfolio to Nuxt because of markdown libraries in next never survives
 
-- [ ] Add projects page
-- [ ] Add project page
-- [ ] Add animations back in
+- [x] Add projects page
+- [x] Add project page
+- [x] Add animations back in
 - [ ] Add localization in danish and english
-- [ ] update hero image and background
+- [x] update hero image and background

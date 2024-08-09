@@ -36,7 +36,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="absolute top-0 left-0 w-full h-full bg-[#15161A] z-[1000] grid place-content-center">
+  <div class="fixed top-0 left-0 w-full h-full bg-[#15161A] z-[1000] grid place-content-center">
     <div
       class="flex gap-3 items-center"
     >
