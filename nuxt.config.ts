@@ -10,6 +10,25 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss"
   ],
+  icon: {
+    customCollections: [
+      {
+        prefix: 'self',
+        dir: './custom-icons'
+      },
+    ],
+  },
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          },
+        }
+      }
+    }
+  },
   i18n: {
     vueI18n: './i18n.config.ts',
   }
