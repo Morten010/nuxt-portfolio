@@ -1,21 +1,21 @@
 <script setup lang="ts">
-const route = useRoute();
-const {
-  params: {
-    slug
-  }
-} = route
+  const route = useRoute();
 
-const { data, error, refresh } = await useAsyncData(
-  `content-${route.path}`,
-  () => queryContent().where({ _path: `/projects/${slug}` }).findOne()
-);
+  const {
+    params: {
+      slug
+    }
+  } = route
 
-useHead({
-  title: data.value?.title || "Project does not exist",
-  titleTemplate: "%s | project",
-});
+  const { data, error, refresh } = await useAsyncData(
+    `content-${route.path}`,
+    () => queryContent().where({ _path: `/projects/${slug}` }).findOne()
+  );
 
+  useHead({
+    title: data.value?.title || "Project does not exist",
+    titleTemplate: "%s | project",
+  });
 </script>
 
 <template>
