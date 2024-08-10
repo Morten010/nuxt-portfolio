@@ -14,7 +14,7 @@
     >
       <h1
       class="text-4xl sm:text-6xl font-bold !leading-[3.4rem]"
-      >
+      > 
         Morten Rasmussen
       </h1>
       <p

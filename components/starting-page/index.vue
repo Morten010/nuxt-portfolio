@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, defineProps, defineEmits } from 'vue';
+import { ref, onMounted } from 'vue';
 import { helloTranslations } from '~/constants';
 
 const props = defineProps<{ isActive: boolean }>();
