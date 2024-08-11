@@ -20,6 +20,11 @@ export default defineNuxtConfig({
     ],
     
   },
+  content: {
+    locales:[
+      'en', 'da'
+    ],
+  },
   tailwindcss: {
     config: {
       theme: {
@@ -32,6 +37,22 @@ export default defineNuxtConfig({
     }
   },
   i18n: {
+    strategy: 'no_prefix',
     vueI18n: './i18n.config.ts',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    },
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US'
+      },
+      {
+        code: 'da',
+        iso: 'dk-DK'
+      }
+    ]
   }
 })

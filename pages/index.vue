@@ -1,5 +1,12 @@
 <script setup lang='ts'>
-  const { data: projects } = await useAsyncData('projects', () => queryContent('/').only(['title', 'thumbnail', 'description', '_path']).find())
+  const { locale } = useI18n() 
+  
+  const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, () => queryContent('/').where({ _locale: locale.value }).only(['title', 'thumbnail', 'description', '_path', '_locale']).find())
+  console.log(projects.value);
+  
+  watch(locale, async () => {
+    await refresh();
+  });
 
 </script>
 
@@ -65,6 +72,7 @@
     >
     <UiProjectCard 
       v-for="project of projects"
+      :path="project._path!"
       :image="project.thumbnail"
       :title="project.title!"
       :description="project.description"

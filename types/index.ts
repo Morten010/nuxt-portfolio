@@ -3,5 +3,5 @@ export interface ProjectCardProps {
     title: string;
     description: string | undefined;
     image: string
-    slugAsParams: string
+    path: string
 } 

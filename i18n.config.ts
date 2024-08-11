@@ -8,7 +8,9 @@ export default defineI18nConfig(() => ({
         skillSubTitle: "some of my",
         projectsTitle: "Projects",
         projectsSubTitle: "Here are a few of my personal projects",
-        projectsPageTitle: "My Projects"
+        projectsPageTitle: "My Projects",
+        langDa: "Danish",
+        langEn: "English"
       },
       da: {
         heroSubTitle: "Webudvikler med speciale i full-stack udvikling. Med hjælp fra HTML, CSS, JavaScript, React, Next.js, Node.js og MySQL.",
@@ -16,7 +18,9 @@ export default defineI18nConfig(() => ({
         skillSubTitle: "nogle af mine",
         projectsTitle: "Projekter",
         projectsSubTitle: "Her er nogle af mine personlige projekter",
-        projectsPageTitle: "Mine Projekter"
+        projectsPageTitle: "Mine Projekter",
+        langDa: "Dansk",
+        langEn: "Engelsk"
       }
     }
 }))

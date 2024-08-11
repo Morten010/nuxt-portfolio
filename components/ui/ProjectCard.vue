@@ -6,18 +6,15 @@
     classes,
     description,
     image,
-    slugAsParams,
+    path,
     title
   } = defineProps<ProjectCardProps>()
-    const parent = ref<VNodeRef | null>(null)
+  const parent = ref<VNodeRef | null>(null)
+  const urlPath = `/projects/${path.split('/')[path.split('/').length - 1]}`  
   
   const handleTrailer = (e: MouseEvent) => {
-    console.log("ran");
     
   if (parent.value) {
-    console.log(parent.value.style.opacity);
-    console.log(!parent.value.style.opacity);
-    console.log(!!parent.value.style.opacity);
     
     if(parent.value.style.opacity !== ''){
       parent.value.style.opacity = 1
@@ -39,7 +36,7 @@ const handleRemove = () => {
 
 <template>
   <NuxtLink
-  :href='`/projects/wireup`'
+  :href='urlPath'
   :class="cn(
     'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative sm:w-full flex-grow overflow-hidden',
     classes

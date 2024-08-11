@@ -1,6 +1,9 @@
 <script setup lang="ts">
-  const route = useRoute();
+  import { watch } from 'vue' 
 
+  const route = useRoute();
+  const { locale } = useI18n() 
+  
   const {
     params: {
       slug
@@ -8,10 +11,16 @@
   } = route
 
   const { data, error, refresh } = await useAsyncData(
-    `content-${route.path}`,
-    () => queryContent().where({ _path: `/projects/${slug}` }).findOne()
+    `content-${locale.value}-${slug}`,
+    () => queryContent(`/projects/${locale.value}/${slug}`).where({
+      _locale: locale.value,
+    }).findOne()
   );
-
+  
+  watch(locale, async () => {
+    await refresh();
+  });
+  
   useHead({
     title: data.value?.title || "Project does not exist",
     titleTemplate: "%s | project",

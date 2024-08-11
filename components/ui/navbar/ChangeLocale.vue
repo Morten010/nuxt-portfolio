@@ -1,18 +1,35 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
-const { locale, setLocale } = useI18n()
-const open = ref(false)
+    import { ref, onMounted } from 'vue'
+    const { locale, setLocale } = useI18n()
+    const open = ref(false)
+    const container = ref<HTMLElement>()
 
-const handleLocaleChange = (locale: 'da' | 'en') => {
-    setLocale(locale)
-    open.value = false
-}
+    const handleLocaleChange = (locale: 'da' | 'en') => {
+        setLocale(locale)
+        open.value = false
+    }
 
+    const handleClickOutside = (event: Event) => {
+        if (container.value && !container.value.contains(event.target as Node)) {
+            open.value = false
+        }
+    }
+
+    onMounted(() => {
+        document.addEventListener('mousedown', handleClickOutside)
+    })
+
+    onUnmounted(() => {
+        document.removeEventListener('mousedown', handleClickOutside)
+    })
 </script>
 
 <template>
-    <div class="relative">
-        <div class="flex place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full relative"
+    <div 
+        class="relative"
+        ref="container"
+    >
+        <div class="flex place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full relative cursor-pointer"
             @click="open = !open">
             <NuxtImg :src="locale == 'da' ? '/icons/danish.svg' : '/icons/english.svg'" class="w-5 h-5" />
         </div>
@@ -25,7 +42,7 @@ const handleLocaleChange = (locale: 'da' | 'en') => {
                     </div>
                     <div
                         class="absolute left-2/4 -translate-x-2/4 bottom-1 translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-10 text-sm text-white/40 pointer-events-none">
-                        Danish
+                        {{ $t('langDa') }}
                     </div>
                 </div>
                 <div class="relative group">
@@ -35,7 +52,7 @@ const handleLocaleChange = (locale: 'da' | 'en') => {
                     </div>
                     <div
                         class="absolute left-2/4 -translate-x-2/4 bottom-1 translate-y-full opacity-0 group-hover:opacity-100 transition-opacity duration-10 text-sm text-white/40 pointer-events-none">
-                        English
+                        {{ $t('langEn') }}
                     </div>
                 </div>
             </div>
