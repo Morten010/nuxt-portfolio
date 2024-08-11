@@ -36,6 +36,14 @@
                 />
                 <!-- divider -->
 
+                <UiNavbarChangeLocale />
+
+                <!-- divider -->
+                <div 
+                    class="h-[30px] border border-l border-white/10 inline-block"
+                />
+                <!-- divider -->
+
                 <NuxtLink
                     to=""
                     class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full"
