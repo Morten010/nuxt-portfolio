@@ -1,8 +1,7 @@
 <script setup lang='ts'>
   import { type WakaTimeResponse } from "~/types";
   
-  const { data } = await useFetch<WakaTimeResponse>('/api/codingTime')
-  console.log(data.value);
+  const { data, error } = await useFetch<WakaTimeResponse>('/api/codingTime')
 </script>
 
 <template>
@@ -14,12 +13,12 @@
       class="flex items-center gap-2 mb-1"
     >
       <icon name="radix-icons:clock" />
-      Coding hours
+      {{ $t('codingHours') }}
     </h3>
     <p
       class="text-2xl font-semibold"
     >
-      {{ formatTime(data?.data.data.total_seconds!) }}
+      {{ error ? '--' : formatTime(data?.data.data.total_seconds!) }}
     </p>
   </div>
 </template>

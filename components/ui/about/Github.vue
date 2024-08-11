@@ -17,12 +17,12 @@
     <h1
         class="flex items-center gap-2"
     >
-        <Icon class="group-hover:text-[#15161A] text-yellow-500 transition-colors duration-200" name="ic:round-star" /> Github total stars
+        <Icon class="group-hover:text-[#15161A] text-yellow-500 transition-colors duration-200" name="ic:round-star" /> {{ $t('githubTitle') }}
     </h1>
     <p
         class="text-2xl font-semibold"
     >
-        {{ data?.data }} stars
+        {{ error ? 10 : data?.data }} {{ $t('githubStars') }}
     </p>
   </NuxtLink>
 </template>

@@ -11,12 +11,12 @@
             <p
                 class="text-center text-sm text-[#526FFF] jetBrain"
             >
-                A little
+                {{ $t('aboutMeSubTitle') }}
             </p>
             <h2 
                 class="text-5xl font-semibold text-center mb-2 leading-10"
             >
-                About me
+                {{ $t('aboutMeTitle') }}
             </h2>
         </div>
         <div

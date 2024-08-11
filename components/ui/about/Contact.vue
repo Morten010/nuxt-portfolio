@@ -8,7 +8,7 @@
         <h2
             class="flex items-center gap-2 mb-2"
         >
-            <Icon name="ph:link" /> Connect with me
+            <Icon name="ph:link" /> {{ $t('connectTitle') }}
         </h2>
 
         <div>

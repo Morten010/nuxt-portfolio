@@ -10,7 +10,14 @@ export default defineI18nConfig(() => ({
         projectsSubTitle: "Here are a few of my personal projects",
         projectsPageTitle: "My Projects",
         langDa: "Danish",
-        langEn: "English"
+        langEn: "English",
+        aboutMeSubTitle: "A little",
+        aboutMeTitle: "About me",
+        codingHours: "Coding hours",
+        githubTitle: "Github total stars",
+        githubStars: "Stars",
+        connectTitle: "Connect with me",
+        availableWork: "Available for work!",
       },
       da: {
         heroSubTitle: "Webudvikler med speciale i full-stack udvikling. Med hjælp fra HTML, CSS, JavaScript, React, Next.js, Node.js og MySQL.",
@@ -20,7 +27,14 @@ export default defineI18nConfig(() => ({
         projectsSubTitle: "Her er nogle af mine personlige projekter",
         projectsPageTitle: "Mine Projekter",
         langDa: "Dansk",
-        langEn: "Engelsk"
+        langEn: "Engelsk",
+        aboutMeSubTitle: "En smule",
+        aboutMeTitle: "Omkring mig",
+        codingHours: "Timer kodet",
+        githubTitle: "Github stjerner i alt",
+        githubStars: "stjerner",
+        connectTitle: "Kontakt mig",
+        availableWork: "Tilgængelig til arbejde!",
       }
     }
 }))
