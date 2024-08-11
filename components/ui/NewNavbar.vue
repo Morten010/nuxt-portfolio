@@ -15,18 +15,18 @@
                     to="/"
                     class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
                 >
-                    <Icon 
+                    <NuxtImg 
+                        src="/icons/home.svg"
                         class="w-6 h-6"
-                        name="self:home" 
                     />
                 </NuxtLink>
                 <NuxtLink
                     to="/projects"
                     class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
                 >
-                    <Icon 
+                    <NuxtImg 
+                        src="/icons/project.svg"
                         class="w-6 h-6"
-                        name="self:projects" 
                     />
                 </NuxtLink>
                 

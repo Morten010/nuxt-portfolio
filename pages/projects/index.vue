@@ -1,7 +1,7 @@
 <script setup lang='ts'>
     const { data, error, refresh } = await useAsyncData(
-    `projects-all`,
-    () => queryContent().find()
+      `projects-all`,
+      () => queryContent().find()
     );
 </script>
 

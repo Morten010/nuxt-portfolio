@@ -10,6 +10,16 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/tailwindcss"
   ],
+  icon: {
+    // provider: 'server',
+    customCollections: [
+      {
+        prefix: 'self',
+        dir: './assets/custom-icons'
+      },
+    ],
+    
+  },
   tailwindcss: {
     config: {
       theme: {
