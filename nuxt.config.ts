@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss"
   ],
   icon: {
-    provider: 'server',
     customCollections: [
       {
         prefix: 'self',
