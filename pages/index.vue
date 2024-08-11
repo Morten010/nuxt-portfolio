@@ -40,7 +40,7 @@
   <!-- hero section -->
 
   <section
-    class="my-20 text-center"
+    class="my-32 text-center"
   > 
     <div>
       <p
@@ -80,11 +80,9 @@
   </div>
   </section>
 
+  <!-- about -->
+  <UiAboutMe />
+  <!-- about -->
+
  </div>
 </template>
-
-<style>
-.jetBrain{
-  font-family: "JetBrains Mono", monospace;
-}
-</style>

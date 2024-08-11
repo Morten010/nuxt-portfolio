@@ -40,6 +40,10 @@ function handleUpdateIsActive(newValue: boolean) {
 @tailwind components;
 @tailwind utilities;
 
+.jetBrain{
+  font-family: "JetBrains Mono", monospace;
+}
+
 *,
 *::before,
 *::after {
