@@ -3,8 +3,6 @@
   
   const { data, error } = await useFetch<WakaTimeResponse>('/api/codingTime')
 
-  console.log(data.value?.error);
-
 </script>
 
 <template>
