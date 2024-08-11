@@ -45,7 +45,7 @@
                 <!-- divider -->
 
                 <NuxtLink
-                    to=""
+                    to="https://github.com/Morten010"
                     class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full"
                 >
                     <Icon 
@@ -54,7 +54,7 @@
                     />
                 </NuxtLink>
                 <NuxtLink
-                    to=""
+                    to="https://www.linkedin.com/in/morten-rasmussen-269564182/"
                     class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full mr-2"
                 >
                     <Icon 
