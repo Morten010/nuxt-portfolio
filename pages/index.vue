@@ -2,7 +2,6 @@
   const { locale } = useI18n() 
   
   const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, () => queryContent('/').where({ _locale: locale.value }).only(['title', 'thumbnail', 'description', '_path', '_locale']).find())
-  console.log(projects.value);
   
   watch(locale, async () => {
     await refresh();
