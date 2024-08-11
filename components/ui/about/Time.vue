@@ -2,6 +2,9 @@
   import { type WakaTimeResponse } from "~/types";
   
   const { data, error } = await useFetch<WakaTimeResponse>('/api/codingTime')
+
+  console.log(data.value?.error);
+
 </script>
 
 <template>
@@ -18,7 +21,7 @@
     <p
       class="text-2xl font-semibold"
     >
-      {{ error ? '--' : formatTime(data?.data.data.total_seconds!) }}
+      {{ (error || data.error) ? '--' : formatTime(data?.data.data.total_seconds!) }}
     </p>
   </div>
 </template>
