@@ -3,7 +3,7 @@
 
 <template>
     <section
-        class="flex flex-col gap-2 mt-20 max-w-[800px] mx-auto"
+        class="flex flex-col gap-2 mt-20 sm:max-w-[800px] mx-auto max-w-[calc(100vw-50px)]"
     >
         <div
             class="mb-4"

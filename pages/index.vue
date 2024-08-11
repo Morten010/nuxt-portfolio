@@ -13,10 +13,10 @@
  <div>
   <!-- hero section -->
   <section
-  class='flex p-4 w-full pr-2 flex-col sm:flex-row items-center pt-20'
+  class='flex p-4 w-full pr-2 flex-col md:flex-row items-center pt-10 sm:pt-20'
   >
     <article
-    class='w-full sm:w-[40%] flex flex-col gap-4'
+    class='w-full md:w-[40%] flex flex-col gap-4'
     >
       <h1
       class="text-4xl sm:text-6xl font-bold !leading-[3.4rem]"
@@ -30,7 +30,7 @@
       </p>
     </article>
     <aside
-    class='w-full sm:w-[60%] relative min-h-[40vh] overflow-hidden'
+    class='w-full md:w-[60%] relative min-h-[40vh] overflow-hidden max-w-[calc(100vw-50px)]'
     >
       <SvgsMap 
         class="mx-auto"
@@ -67,7 +67,7 @@
       {{ $t('projectsSubTitle') }}
     </p>
     <div
-      class="py-[30px] grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2"
+      class="py-[30px] grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 max-w-[calc(100vw-40px)] mx-auto"
     >
     <UiProjectCard 
       v-for="project of projects"

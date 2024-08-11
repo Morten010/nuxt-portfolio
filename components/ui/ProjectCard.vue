@@ -38,7 +38,7 @@ const handleRemove = () => {
   <NuxtLink
   :href='urlPath'
   :class="cn(
-    'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative sm:w-full flex-grow overflow-hidden',
+    'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative w-full sm:w-full flex-grow overflow-hidden',
     classes
   )"
   @mousemove="handleTrailer"

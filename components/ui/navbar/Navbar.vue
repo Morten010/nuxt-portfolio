@@ -3,7 +3,7 @@
 
 <template>
     <div
-        class="fixed top-0 left-0 w-full p-4 z-50 flex justify-center"
+        class="fixed bottom-0 top-[unset] sm:bottom-[unset] sm:top-0 left-0 w-full p-4 z-50 flex justify-center"
     >
         <div
             class="bg-[#15161a]/85 rounded-full"
