@@ -12,7 +12,6 @@ export default defineCachedEventHandler(async (event) => {
         },
       }
     );
-    console.log(res);
     
     return {
       data: res as WakaTimeResponse,

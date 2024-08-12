@@ -10,13 +10,10 @@ export default defineCachedEventHandler(async (event) => {
     setResponseHeader(event, 'Cache-Control', 'public, max-age=86400, stale-while-revalidate=3600');
 
     let totalStars = 0;
-    console.log(totalStars);
     
 
     for(const repo of res){
         totalStars += repo.stargazers_count
-        console.log(totalStars);
-        console.log(repo.stargazers_count);
     }
     
     return {
