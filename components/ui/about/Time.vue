@@ -8,7 +8,7 @@
 <template>
 
   <div
-    class="border border-[#47484b] p-3 rounded-xl"
+    class="border border-[#47484b] p-3 rounded-xl col-span-2 sm:col-span-1"
   >
     <h3
       class="flex items-center gap-2 mb-1"

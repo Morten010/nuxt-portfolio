@@ -12,7 +12,7 @@
   <NuxtLink
     to="https://github.com/Morten010"
     target="_blank"
-    class="border border-[#47484b] p-3 rounded-xl bg-[#526FFF] font-medium group"
+    class="border border-[#47484b] p-3 rounded-xl bg-[#526FFF] font-medium group col-span-2 sm:col-span-1"
   >
     <h1
         class="flex items-center gap-2"
