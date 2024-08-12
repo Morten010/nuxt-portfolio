@@ -45,6 +45,7 @@ export default defineNuxtConfig({
   i18n: {
     strategy: 'no_prefix',
     vueI18n: './i18n.config.ts',
+    baseUrl: 'https://www.mortenra.com/',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -53,12 +54,14 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'en',
-        iso: 'en-US'
+        iso: 'en-US',
+        name: 'english'
       },
       {
         code: 'da',
-        iso: 'dk-DK'
+        iso: 'da-DK',
+        name: 'danish'
       }
-    ]
+    ],
   }
 })

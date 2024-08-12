@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <NuxtLink
+  <NuxtLinkLocale
     to="https://github.com/Morten010"
     target="_blank"
     class="border border-[#47484b] p-3 rounded-xl bg-[#526FFF] font-medium group col-span-2 sm:col-span-1"
@@ -24,5 +24,5 @@
     >
         {{ error ? 10 : data?.data }} {{ $t('githubStars') }}
     </p>
-  </NuxtLink>
+  </NuxtLinkLocale>
 </template>

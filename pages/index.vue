@@ -7,6 +7,13 @@
     alt: "Morten Rasmussen - Portfolio",
   })
 
+  definePageMeta({
+      title: {
+        default: 'Morten Rasmussen',
+        template: '%s | portfolio'
+      }
+  })
+
   
   // Query data
   const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, () => queryContent('/').where({ _locale: locale.value }).only(['title', 'thumbnail', 'description', '_path', '_locale']).find())

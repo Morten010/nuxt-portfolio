@@ -11,7 +11,7 @@
             <nav
                 class="flex gap-1 justify-between border border-[#3C3E4D]/85 bg-[#27272D/20] backdrop-blur-sm p-2 max-w-screen-xl mx-auto rounded-full items-center"
             >
-                <NuxtLink
+                <NuxtLinkLocale
                     to="/"
                     class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
                 >
@@ -19,8 +19,8 @@
                         src="/icons/home.svg"
                         class="w-6 h-6"
                     />
-                </NuxtLink>
-                <NuxtLink
+                </NuxtLinkLocale>
+                <NuxtLinkLocale
                     to="/projects"
                     class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
                 >
@@ -28,7 +28,7 @@
                         src="/icons/project.svg"
                         class="w-6 h-6"
                     />
-                </NuxtLink>
+                </NuxtLinkLocale>
                 
                 <!-- divider -->
                 <div 
@@ -44,7 +44,7 @@
                 />
                 <!-- divider -->
 
-                <NuxtLink
+                <NuxtLinkLocale
                     to="https://github.com/Morten010"
                     class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full"
                 >
@@ -52,8 +52,8 @@
                         name="uiw:github" 
                         class="w-5 h-5"
                     />
-                </NuxtLink>
-                <NuxtLink
+                </NuxtLinkLocale>
+                <NuxtLinkLocale
                     to="https://www.linkedin.com/in/morten-rasmussen-269564182/"
                     class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full mr-2"
                 >
@@ -61,7 +61,7 @@
                         name="uiw:linkedin" 
                         class="w-5 h-5"
                     />
-                </NuxtLink>
+                </NuxtLinkLocale>
                 
             </nav>
         </div>

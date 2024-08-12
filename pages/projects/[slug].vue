@@ -50,7 +50,7 @@
       <div
       class='py-2 flex gap-2 mb-4'
       >
-        <NuxtLink
+        <NuxtLinkLocale
         class='card-bg p-2 text-2xl rounded hover:opacity-70 transition-opacity ease-in-out relative h-[42px]'
         :href="data?.github"
         target='_blank'
@@ -58,8 +58,8 @@
         aria-label="View code"
         >
           <Icon name="bi:github" />
-        </NuxtLink>
-        <NuxtLink
+        </NuxtLinkLocale>
+        <NuxtLinkLocale
         class='card-bg p-2 text-2xl rounded hover:opacity-70 transition-opacity ease-in-out h-[42px]'
         :href="data?.link"
         target='_blank' 
@@ -67,7 +67,7 @@
         aria-label="view website"
         >
           <Icon name="mdi:eye" />
-        </NuxtLink>
+        </NuxtLinkLocale>
       </div>
       <!-- links -->
     <ContentRenderer 
@@ -89,12 +89,12 @@
     <p
       class="text-center text-white/35"
     >
-      Go back <NuxtLink
+      Go back <NuxtLinkLocale
         to="/"
         class="text-[#526FFF]"
       >
         Home
-      </NuxtLink> 
+      </NuxtLinkLocale> 
     </p>
   </main>
 </template>
