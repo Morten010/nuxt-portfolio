@@ -1,6 +1,14 @@
 <script setup lang='ts'>
   const { locale } = useI18n() 
+
+  // Seo
+  defineOgImage({
+    url: '/opengraph.png',
+    alt: "Morten Rasmussen - Portfolio",
+  })
+
   
+  // Query data
   const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, () => queryContent('/').where({ _locale: locale.value }).only(['title', 'thumbnail', 'description', '_path', '_locale']).find())
   
   watch(locale, async () => {

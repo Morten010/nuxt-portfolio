@@ -1,11 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+  import { ref } from 'vue';
 
-const isActive = ref(true); 
+  // Seo
+  defineOgImage({
+    url: '/opengraph.png',
+    alt: "Morten Rasmussen - Portfolio",
+  })
 
-function handleUpdateIsActive(newValue: boolean) {
-  isActive.value = newValue;
-}
+
+  // vue
+  const isActive = ref(true); 
+
+  function handleUpdateIsActive(newValue: boolean) {
+    isActive.value = newValue;
+  }
 </script>
 
 <template>

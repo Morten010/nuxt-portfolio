@@ -10,6 +10,7 @@ export interface ProjectCardProps {
 // waka time response
 export interface WakaTimeResponse {
     data: Data
+    error: string
   }
   
   export interface Data {

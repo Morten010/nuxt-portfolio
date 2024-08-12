@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image",
     "@nuxt/icon",
-    "@nuxtjs/tailwindcss"
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/seo"
   ],
   icon: {
     customCollections: [
@@ -18,6 +19,12 @@ export default defineNuxtConfig({
       },
     ],
     
+  },
+  site: {
+    url: 'https://www.mortenra.com/',
+    name: 'Morten Rasmussen',
+    description: 'I am a webdeveloper from Kolding, Denmark. With great interest in full stack web apps and websites. I love to make things and see how things just quietly fall into place.',
+
   },
   content: {
     locales:[

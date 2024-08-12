@@ -19,6 +19,7 @@
     <p
       class="text-2xl font-semibold"
     >
+      <!-- @ts-ignore -->
       {{ (error || data.error) ? '--' : formatTime(data?.data.data.total_seconds!) }}
     </p>
   </div>
