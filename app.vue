@@ -14,9 +14,19 @@
     htmlAttrs: {
       lang: i18nHead.value.htmlAttrs!.lang
     },
-    link: [...(i18nHead.value.link || [])],
+    link: [...(i18nHead.value.link || []), { rel: 'icon', type: 'image/png', href: '/4.icon.ico' }],
     meta: [...(i18nHead.value.meta || [])],
   })
+
+  useSeoMeta({
+  ogImage: '/opengraph.png',
+  twitterTitle: 'Morten Rasmussen | Portfolio',
+  twitterDescription: 'Webdeveloper from denmark.',
+  twitterImage: '/twitter-image.png',
+  twitterCard: 'summary_large_image'
+})
+
+
 
 
   // vue
