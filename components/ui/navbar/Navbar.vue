@@ -14,19 +14,23 @@
                 <NuxtLinkLocale
                     to="/"
                     class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
+                    aria-label="go to homepage"
                 >
                     <NuxtImg 
                         src="/icons/home.svg"
                         class="w-6 h-6"
+                        alt="house"
                     />
                 </NuxtLinkLocale>
                 <NuxtLinkLocale
                     to="/projects"
                     class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
+                    aria-label="go to Projects page"
                 >
                     <NuxtImg 
                         src="/icons/project.svg"
                         class="w-6 h-6"
+                        alt="Box"
                     />
                 </NuxtLinkLocale>
                 
@@ -47,6 +51,7 @@
                 <NuxtLinkLocale
                     to="https://github.com/Morten010"
                     class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full"
+                    aria-label="Github"
                 >
                     <Icon 
                         name="uiw:github" 
@@ -56,6 +61,7 @@
                 <NuxtLinkLocale
                     to="https://www.linkedin.com/in/morten-rasmussen-269564182/"
                     class="grid place-content-center text-white/30 hover:text-white transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full mr-2"
+                    aria-label="Linkedin"
                 >
                     <Icon 
                         name="uiw:linkedin" 

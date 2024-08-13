@@ -29,9 +29,11 @@
         class="relative"
         ref="container"
     >
-        <div class="flex place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full relative cursor-pointer"
+        <div 
+            class="flex place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-2 h-full relative cursor-pointer"
+            aria-label="Change language"
             @click="open = !open">
-            <NuxtImg :src="locale == 'da' ? '/icons/danish.svg' : '/icons/english.svg'" class="w-5 h-5" />
+            <NuxtImg :src="locale == 'da' ? '/icons/danish.svg' : '/icons/english.svg'" alt="Language" class="w-5 h-5" />
         </div>
         <Transition mode="out-in">
             <div class="absolute -top-[60vw] sm:top-[unset] bottom-[unset] sm:-bottom-4 -translate-y-full sm:translate-y-full flex gap-8 sm:gap-3 -translate-x-2/4 left-2/4" v-if="open">
