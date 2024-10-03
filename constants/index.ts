@@ -63,6 +63,10 @@ export const skills: {
     {
         name: "Cypress",
         icon: 'self:cypress'
+    },
+    {
+        name: "Electron",
+        icon: 'simple-icons:electron'
     }
 ]
 
