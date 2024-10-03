@@ -16,6 +16,7 @@
     },
     link: [...(i18nHead.value.link || []), { rel: 'icon', type: 'image/png', href: '/4.icon.ico' }],
     meta: [...(i18nHead.value.meta || [])],
+    script: [ { defer: true, src: 'https://analytics.mortenra.com/script.js', "data-website-id": "a5788d8c-0d10-4445-ae9b-42945b13e4cb" }]
   })
 
   useSeoMeta({
