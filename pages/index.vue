@@ -16,7 +16,7 @@
 
   
   // Query data
-  const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, () => queryContent('/').where({ _locale: locale.value }).only(['title', 'thumbnail', 'description', '_path', '_locale']).find())
+  const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, () => queryContent('/').where({ _locale: locale.value, homepage: true }).only(['title', 'thumbnail', 'description', '_path', '_locale', 'homepage']).find())
   
   watch(locale, async () => {
     await refresh();
@@ -85,7 +85,7 @@
       class="py-[30px] grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 max-w-[calc(100vw-40px)] mx-auto"
     >
     <UiProjectCard 
-      v-for="project of projects"
+      v-for="project of projects?.slice(0, 4)"
       :path="project._path!"
       :image="project.thumbnail"
       :title="project.title!"
