@@ -20,7 +20,7 @@
     >
         <Transition>
             <p
-                class="absolute -top-2 left-2/4 -translate-x-2/4 -translate-y-full whitespace-nowrap bg-[#1b1c21] border-white/20 border text-white px-2 py-1 rounded font-medium"
+                class="absolute -top-2 left-2/4 -translate-x-2/4 -translate-y-full whitespace-nowrap bg-[#1b1c21] border-white/20 border text-white px-2 py-1 rounded font-medium !mt-0"
                 v-if="open"
             >
                 {{ skill.name }}

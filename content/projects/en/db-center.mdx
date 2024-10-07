@@ -10,38 +10,35 @@ homepage: true
 priority: 1
 ---
 
-## DbCenter - local development made easier
+## 💻 DbCenter - local development made easier
 
 DbCenter is inspired by StackBricks and dbgate. The goal is to gather database setups with a database GUI like DbBeaver or Dbgate in one place with a clean UI. It makes it easier to set up a new project and get started quickly without hassle.
 
 ![Fitify project view](/projects/dbcenter/showcase.png)
 
+## 🎨 Techstack used
+Some of the main technologies used for the project.
+
+<MarkdownSkills></MarkdownSkills> 
+
+Why did i choose these technologies?
+
+1. **Nuxt.js:** I choose Nuxt because I’ve been working with Next.js for a long time and recently tried out Nuxt and Vue, so I wanted to test them on a slightly larger project.
+
+2. **Electron:** I needed something to build the nuxt app to a desktop application and was thinking of Electron or Tauri but Tauri have some places where you use rust and that was to much to learn for this project.
+
+3. **Tailwind CSS:** Tailwind CSS was chosen to for Rapid development, and I complemented it with the ShadCn component library to streamline the user interface.
+
+5. **Dockerode:** Dockerode was the easiest way to interact with the users docker.
+5. **Pinia:** Pinia was the state management library that was closes to Zustand which i knew syntax wise.
+
 ## ✨ Features
 
-1. **Set up MySQL database**
-   - Easily set up a MySQL database with just a few clicks. The app then launches a Docker container with MySQL that you can use.
-
-2. **Database overview**
-   - In the database overview, you can see all your tables, columns with their rows, and last but not least, run SQL queries where you can add, view, or delete data.
-
-3. **Update through app**
-   - Look for new versions so the user can update when they want through the app with github releases and electron-autoupdater
+<Features></Features>
 
 ## ❓ Why I built this app
 
 I built this app because I've been curious for a while about how StackBricks works and was getting tired of the ugly UIs that usually come with database GUIs.
-
-## 💻 Why I chose these technologies
-
-When deciding on the technologies for this project, I considered several key factors to ensure an efficient and effective development process:
-
-1. **Nuxt.js**: I’ve been working with Next.js for a long time and recently tried out Nuxt and Vue, so I wanted to test them on a slightly larger project.
-
-2. **Electron**: To create a desktop application that interacts with Docker on the user's computer to run the databases.
-
-3. **Tailwind CSS**: Tailwind CSS was chosen to facilitate rapid development, and I complemented it with the ShadCn component library to streamline the user interface.
-
-5. **Dockerode**: To interact with Docker on the user's computer.
 
 ## 🚀 Future goals for the project
 - [ ] Fix small bugs

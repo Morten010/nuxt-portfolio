@@ -88,3 +88,139 @@ export const helloTranslations = [
     'नमस्ते',
     'হ্যালো'
 ];
+
+export const projectSkills:{
+    [project: string]: {
+        en: {
+            name: string;
+            description: string;
+            icon: string;
+            color: string;
+        }[],
+        da: {
+            name: string;
+            description: string;
+            icon: string;
+            color: string;
+        }[] 
+    }
+} = {
+    'db-center': {
+        en: [
+            {
+                name: 'Nuxt',
+                description: 'Frontend framework used for the project.',
+                icon: 'mdi:nuxt',
+                color: '#00c678'
+            },
+            {
+                name: 'Electron',
+                description: 'Nuxt electron module used to build the desktop app.',
+                icon: 'simple-icons:electron',
+                color: '#9feaf9'
+            },
+            {
+                name: 'Dockerode',
+                description: 'Used to create and run databases easily on the users device.',
+                icon: 'uil:docker',
+                color: '#2494b6'
+            },
+            {
+                name: 'Tailwind',
+                description: 'Css framework used for easy and fast ui development.',
+                icon: 'mdi:tailwind',
+                color: '#38bdf8'
+            },
+            {
+                name: 'Pinia',
+                description: 'Used to keep track of the databases in local storage.',
+                icon: 'logos:pinia',
+                color: '#ffe267'
+            }
+        ],
+        da: [
+            {
+                "name": "Nuxt",
+                "description": "Frontend framework brugt til projektet.",
+                "icon": "mdi:nuxt",
+                "color": "#00c678"
+            },
+            {
+                "name": "Electron",
+                "description": "Nuxt Electron modul brugt til at bygge desktop appen.",
+                "icon": "simple-icons:electron",
+                "color": "#9feaf9"
+            },
+            {
+                "name": "Dockerode",
+                "description": "Bruges til nemt at oprette og køre databaser på brugerens enhed.",
+                "icon": "uil:docker",
+                "color": "#2494b6"
+            },
+            {
+                "name": "Tailwind",
+                "description": "CSS framework brugt til nem og hurtig UI-udvikling.",
+                "icon": "mdi:tailwind",
+                "color": "#38bdf8"
+            },
+            {
+                "name": "Pinia",
+                "description": "Bruges til at holde styr på databaser i local storage.",
+                "icon": "logos:pinia",
+                "color": "#ffe267"
+            }
+        ]        
+    }
+}
+
+export const projectFeatures:{
+    [project: string]: {
+        en: {
+            title: string;
+            description: string;
+            icon: string;
+        }[],
+        da: {
+            title: string;
+            description: string;
+            icon: string;
+        }[]
+    } 
+} = {
+    'db-center': {
+        en: [
+            {
+                title: 'Database editor WIP',
+                description: 'Create tables, delete tables, update data or get data through the query runner.',
+                icon: 'oui:editor-code-block',
+            },
+            {
+                title: 'Database overview',
+                description: 'Keep track of all you’re databases, see which ones are running, easy start and stop database and copy connection string,',
+                icon: 'bi:binoculars',
+            },
+            {
+                title: 'Create databases',
+                description: 'Easily set up a MySQL and Postgresql database with just a few clicks. The app then launches a Docker container with MySQL that you can use.',
+                icon: 'proicons:database-add',
+            }
+        ],
+        da: [
+            {
+                "title": "Database editor WIP",
+                "description": "Opret tabeller, slet tabeller, opdater data eller hent data gennem query runneren.",
+                "icon": "oui:editor-code-block"
+            },
+            {
+                "title": "Database oversigt",
+                "description": "Hold styr på alle dine databaser, se hvilke der kører, start og stop databaser nemt, og kopier forbindelsesstrengen.",
+                "icon": "bi:binoculars"
+            },
+            {
+                "title": "Opret databaser",
+                "description": "Opsæt nemt en MySQL og PostgreSQL database med blot et par klik. Appen starter derefter en Docker-container med MySQL, som du kan bruge.",
+                "icon": "proicons:database-add"
+            }
+        ]        
+    }
+}

@@ -1,6 +1,9 @@
 <script setup lang="ts">
   import { watch } from 'vue' 
   import Youtube from '@/components/markdownComponents/Youtube.vue'
+  import MarkdownSkillsComponent from '~/components/markdownComponents/Techstack.vue'
+  import MarkdownFeaturesComponent from '~/components/markdownComponents/Features.vue'
+import Features from '~/components/markdownComponents/Features.vue';
 
   const route = useRoute();
   const { locale } = useI18n() 
@@ -28,7 +31,9 @@
   });
 
   const components = {
-    'youtube': Youtube
+    'youtube': Youtube,
+    'MarkdownSkills': MarkdownSkillsComponent,
+    'Features': Features
   }
   
 </script>
@@ -140,7 +145,7 @@
   }
 
   #renderedContent :deep(p) {
-    @apply leading-7 mt-6;
+    @apply leading-7 mt-4 text-[#A1A2A3] tracking-wide;
   }
 
   #renderedContent :deep(ul) {
@@ -148,11 +153,14 @@
   }
 
   #renderedContent :deep(ol) {
-    @apply my-6 ml-6 list-decimal;
+    @apply my-6 ml-6 list-decimal text-[#A1A2A3];
   }
 
   #renderedContent :deep(li) {
-    @apply mt-2;
+    @apply mt-2 marker:text-white;
+  }
+  #renderedContent :deep(strong) {
+    @apply text-white;
   }
 
   #renderedContent :deep(blockquote) {
