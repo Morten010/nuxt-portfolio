@@ -25,6 +25,8 @@
     title: data.value?.title || "Project does not exist",
     titleTemplate: "%s | project",
   });
+  console.log(data.value);
+  
 </script>
 
 <template>
@@ -50,7 +52,7 @@
       <div
       class='py-2 flex gap-2 mb-4'
       >
-        <NuxtLinkLocale
+        <NuxtLink
         class='card-bg p-2 text-2xl rounded hover:opacity-70 transition-opacity ease-in-out relative h-[42px]'
         :href="data?.github"
         target='_blank'
@@ -58,8 +60,8 @@
         aria-label="View code"
         >
           <Icon name="bi:github" />
-        </NuxtLinkLocale>
-        <NuxtLinkLocale
+        </NuxtLink>
+        <NuxtLink
         class='card-bg p-2 text-2xl rounded hover:opacity-70 transition-opacity ease-in-out h-[42px]'
         :href="data?.link"
         target='_blank' 
@@ -67,7 +69,7 @@
         aria-label="view website"
         >
           <Icon name="mdi:eye" />
-        </NuxtLinkLocale>
+        </NuxtLink>
       </div>
       <!-- links -->
     <ContentRenderer 
