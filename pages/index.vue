@@ -16,7 +16,13 @@
 
   
   // Query data
-  const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, () => queryContent('/').where({ _locale: locale.value, homepage: true }).only(['title', 'thumbnail', 'description', '_path', '_locale', 'homepage']).find())
+  const { data: projects, refresh } = await useAsyncData(`/projects/${locale.value}`, 
+    () => queryContent('/')
+      .where({ _locale: locale.value, homepage: true })
+      .only(['title', 'thumbnail', 'description', '_path', '_locale', 'homepage', 'priority' ])
+      .sort({ priority: 1 })
+      .find()
+  )
   
   watch(locale, async () => {
     await refresh();

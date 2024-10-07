@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     locales:[
       'en', 'da'
     ],
+    
   },
   tailwindcss: {
     config: {
@@ -63,5 +64,5 @@ export default defineNuxtConfig({
         name: 'danish'
       }
     ],
-  }
+  },
 })
