@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { watch } from 'vue' 
+  import Youtube from '@/components/markdownComponents/Youtube.vue'
 
   const route = useRoute();
   const { locale } = useI18n() 
@@ -8,7 +9,7 @@
     params: {
       slug
     }
-  } = route
+  } = route;
 
   const { data, error, refresh } = await useAsyncData(
     `content-${locale.value}-${slug}`,
@@ -25,7 +26,10 @@
     title: data.value?.title || "Project does not exist",
     titleTemplate: "%s | project",
   });
-  console.log(data.value);
+
+  const components = {
+    'youtube': Youtube
+  }
   
 </script>
 
@@ -40,7 +44,7 @@
       <NuxtImg
         :src="data?.thumbnail"
         fill
-        alt="map project"
+        :alt="`${data?.title}`"
         priority
         class="z-2 p-2 rounded-2xl opacity-[30%] object-cover absolute top-0 left-0 w-full h-full" />
       <h1 class="z-50 text-3xl sm:text-5xl lg:text-7xl font-semibold ">
@@ -76,10 +80,11 @@
         </NuxtLink>
       </div>
       <!-- links -->
-    <ContentRenderer 
+    <ContentRendererMarkdown
       id="renderedContent" 
       v-if="data" 
       :value="data" 
+      :components="components"
     />
   </main>
 

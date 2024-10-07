@@ -54,7 +54,7 @@ const handleRemove = () => {
         <NuxtImg
           fill
           :src='image'
-          alt='map project'
+          :alt='`${title} project`'
           class='object-cover absolute'
         />
     </div>
