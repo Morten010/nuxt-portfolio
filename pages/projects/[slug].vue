@@ -58,6 +58,8 @@
         target='_blank'
         rel='external'
         aria-label="View code"
+        data-umami-event="go to github"
+        :data-umami-event-project="data?.title"
         >
           <Icon name="bi:github" />
         </NuxtLink>
@@ -67,6 +69,8 @@
         target='_blank' 
         rel='external'
         aria-label="view website"
+        data-umami-event="go to"
+        :data-umami-event-project="data?.title"
         >
           <Icon name="mdi:eye" />
         </NuxtLink>
