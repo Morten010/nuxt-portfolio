@@ -264,14 +264,14 @@ export const navLinks: NavLinkTypes = [
     {
         title: 'Github',
         icon: 'uiw:github',
-        href: '/',
+        href: 'https://github.com/Morten010',
         offpage: true,
         type: 'link'
     },
     {
         title: 'Linkedin',
         icon: 'uiw:linkedin',
-        href: '/projects',
+        href: 'https://www.linkedin.com/in/morten-rasmussen-269564182/',
         offpage: true,
         type: 'link'
     },
