@@ -62,7 +62,7 @@ import Features from '~/components/markdownComponents/Features.vue';
       class='py-2 flex gap-2 mb-4'
       >
         <NuxtLink
-        class='card-bg p-2 text-2xl rounded hover:opacity-70 transition-opacity ease-in-out relative h-[42px]'
+        class='card-bg p-2 rounded hover:opacity-70 transition-opacity ease-in-out h-[42px] flex items-center justify-center gap-2 text-sm font-medium capitalize w-full sm:w-auto'
         :href="data?.github"
         target='_blank'
         rel='external'
@@ -70,10 +70,14 @@ import Features from '~/components/markdownComponents/Features.vue';
         data-umami-event="go to github"
         :data-umami-event-project="data?.title"
         >
-          <Icon name="bi:github" />
+          <Icon 
+            name="bi:github" 
+            size="24"
+          />
+          {{ $t('viewGithub') }}
         </NuxtLink>
         <NuxtLink
-        class='card-bg p-2 text-2xl rounded hover:opacity-70 transition-opacity ease-in-out h-[42px]'
+        class='card-bg p-2 rounded hover:opacity-70 transition-opacity ease-in-out h-[42px] flex items-center justify-center gap-2 text-sm font-medium capitalize w-full sm:w-auto'
         :href="data?.link"
         target='_blank' 
         rel='external'
@@ -81,7 +85,11 @@ import Features from '~/components/markdownComponents/Features.vue';
         data-umami-event="go to"
         :data-umami-event-project="data?.title"
         >
-          <Icon name="mdi:eye" />
+          <Icon 
+            name="mdi:eye" 
+            size="24"  
+          />
+          {{ $t('viewProject') }}
         </NuxtLink>
       </div>
       <!-- links -->

@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/icon",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/seo"
+    "@nuxtjs/seo",
+    '@vueuse/motion/nuxt'
   ],
   icon: {
     customCollections: [
@@ -18,7 +19,6 @@ export default defineNuxtConfig({
         dir: './assets/custom-icons'
       },
     ],
-    
   },
   site: {
     url: 'https://www.mortenra.com/',

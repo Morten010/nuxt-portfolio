@@ -224,3 +224,56 @@ export const projectFeatures:{
         ]        
     }
 }
+
+type NavLinkTypes = ({
+    title: string,
+    icon: string,
+    href: string,
+    offpage: boolean,
+    type: 'link'
+} | {
+    type: 'divider'
+} | {
+    type: 'i18n'
+})[]
+
+export const navLinks: NavLinkTypes = [
+    {
+        title: 'Home',
+        icon: '/icons/home.svg',
+        href: '/',
+        offpage: false,
+        type: 'link'
+    },
+    {
+        title: 'Projects',
+        icon: '/icons/project.svg',
+        href: '/projects',
+        offpage: false,
+        type: 'link'
+    },
+    {
+        type: 'divider'
+    },
+    {
+        type: 'i18n'
+    },
+    {
+        type: 'divider'
+    },
+    {
+        title: 'Github',
+        icon: 'uiw:github',
+        href: '/',
+        offpage: true,
+        type: 'link'
+    },
+    {
+        title: 'Linkedin',
+        icon: 'uiw:linkedin',
+        href: '/projects',
+        offpage: true,
+        type: 'link'
+    },
+
+]

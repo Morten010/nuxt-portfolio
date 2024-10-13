@@ -18,6 +18,8 @@ export default defineI18nConfig(() => ({
         githubStars: "Stars",
         connectTitle: "Connect with me",
         availableWork: "Available for work!",
+        viewGithub: 'View on github',
+        viewProject: 'View project'
       },
       da: {
         heroSubTitle: "Webudvikler med speciale i full-stack udvikling. Med hjælp fra HTML, CSS, JavaScript, React, Next.js, Node.js og MySQL.",
@@ -35,6 +37,8 @@ export default defineI18nConfig(() => ({
         githubStars: "stjerner",
         connectTitle: "Kontakt mig",
         availableWork: "Tilgængelig til arbejde!",
+        viewGithub: 'Se på github',
+        viewProject: 'Se project'
       }
     }
 }))

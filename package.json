@@ -17,6 +17,7 @@
     "@nuxtjs/i18n": "^8.3.3",
     "@nuxtjs/seo": "^2.0.0-rc.18",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@vueuse/motion": "^2.2.6",
     "clsx": "^2.1.1",
     "nuxt": "^3.12.4",
     "tailwind-merge": "^2.4.0",

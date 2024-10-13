@@ -9,9 +9,10 @@
             class="bg-[#15161a]/85 rounded-full"
         >
             <nav
-                class="flex gap-1 justify-between border border-[#3C3E4D]/85 bg-[#27272D/20] backdrop-blur-sm p-2 max-w-screen-xl mx-auto rounded-full items-center"
+                class="flex gap-1 justify-between border border-[#3C3E4D]/85 bg-[#27272D/20] backdrop-blur-sm py-2 px-4 max-w-screen-xl mx-auto rounded-full items-center"
             >
                 <NuxtLinkLocale
+
                     to="/"
                     class="grid place-content-center grayscale hover:grayscale-0 transition-all duration-200 hover:bg-white/5 aspect-square rounded-full p-1.5 h-full"
                     aria-label="go to homepage"
