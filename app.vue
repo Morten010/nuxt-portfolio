@@ -1,50 +1,53 @@
 <script setup lang="ts">
-  import { ref } from 'vue';
+import { ref } from "vue";
 
-  // Seo
-  defineOgImage({
-    url: '/opengraph.png',
-    alt: "Morten Rasmussen - Portfolio",
-  })
+// Seo
+defineOgImage({
+  url: "/opengraph.png",
+  alt: "Morten Rasmussen - Portfolio",
+});
 
-  const i18nHead = useLocaleHead({
-
-  })
-  useHead({
-    htmlAttrs: {
-      lang: i18nHead.value.htmlAttrs!.lang
+const i18nHead = useLocaleHead({});
+useHead({
+  htmlAttrs: {
+    lang: i18nHead.value.htmlAttrs!.lang,
+  },
+  link: [
+    ...(i18nHead.value.link || []),
+    { rel: "icon", type: "image/png", href: "/4.icon.ico" },
+  ],
+  meta: [...(i18nHead.value.meta || [])],
+  script: [
+    {
+      defer: true,
+      src: "https://analytics.mortenra.com/script.js",
+      "data-website-id": "a5788d8c-0d10-4445-ae9b-42945b13e4cb",
     },
-    link: [...(i18nHead.value.link || []), { rel: 'icon', type: 'image/png', href: '/4.icon.ico' }],
-    meta: [...(i18nHead.value.meta || [])],
-    script: [ { defer: true, src: 'https://analytics.mortenra.com/script.js', "data-website-id": "a5788d8c-0d10-4445-ae9b-42945b13e4cb" }]
-  })
+  ],
+});
 
-  useSeoMeta({
-  ogImage: '/opengraph.png',
-  twitterTitle: 'Morten Rasmussen | Portfolio',
-  twitterDescription: 'Webdeveloper from denmark.',
-  twitterImage: '/twitter-image.png',
-  twitterCard: 'summary_large_image'
-})
+useSeoMeta({
+  ogImage: "/opengraph.png",
+  twitterTitle: "Morten Rasmussen | Portfolio",
+  twitterDescription: "Webdeveloper from denmark.",
+  twitterImage: "/twitter-image.png",
+  twitterCard: "summary_large_image",
+});
 
+// vue
+const isActive = ref(true);
 
-
-
-  // vue
-  const isActive = ref(true); 
-
-  function handleUpdateIsActive(newValue: boolean) {
-    isActive.value = newValue;
-  }
+function handleUpdateIsActive(newValue: boolean) {
+  isActive.value = newValue;
+}
 </script>
 
 <template>
   <Transition mode="out-in">
-    <StartingPage 
-      :isActive="isActive" 
-      @update:isActive="handleUpdateIsActive" 
-      v-if="isActive"
-    />
+    <StartingPage
+      :isActive="isActive"
+      @update:isActive="handleUpdateIsActive"
+      v-if="isActive" />
   </Transition>
   <NuxtLayout>
     <NuxtPage />
@@ -70,7 +73,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.jetBrain{
+.jetBrain {
   font-family: "JetBrains Mono", monospace;
 }
 
@@ -82,8 +85,8 @@
   box-sizing: border-box;
 }
 
-body{
-  background-color: #15161A;  
+body {
+  background-color: #d6c9b9;
   color: #fafafa;
   overflow-x: hidden;
   font-family: "Manrope", sans-serif;
@@ -92,28 +95,32 @@ body{
 }
 
 /* navbar */
-.nav{
-  @apply flex flex-col gap-2 text-lg p-1 text-[#AAAEB9] rounded-full  border border-[#47484B] relative
+.nav {
+  @apply flex flex-col gap-2 text-lg p-1 text-[#AAAEB9] rounded-full  border border-[#47484B] relative;
 }
-.nav a{
+.nav a {
   z-index: 100;
 }
-.card-bg{
-  background-color: #1B1C1F;
-  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.60), 0px 2px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.04);
+.card-bg {
+  background-color: #1b1c1f;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.6),
+    0px 2px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.04);
   backdrop-filter: blur(20px);
-  @apply border border-[#47484B]
-
+  @apply border border-[#47484B];
 }
 
-.icons{
-  @apply text-[#AAAEB9] text-xl
+.icons {
+  @apply text-[#AAAEB9] text-xl;
 }
 /* navbar */
 
 /* custom carousel */
-.scrollable{
+.scrollable {
   position: relative;
   width: 100vw;
   left: -75px;
@@ -123,16 +130,15 @@ body{
   scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: visible;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
   overflow: -moz-scrollbars-none;
-  scrollbar-width: none;  /* Firefox */
-  
+  scrollbar-width: none; /* Firefox */
 }
-.empty-slide{
+.empty-slide {
   width: 55px;
 }
-.scrollable::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+.scrollable::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
   overflow-y: visible;
 }
 /* slide snapping dosent work when padding needed */
@@ -155,7 +161,7 @@ body{
 /* custom carousel */
 
 /* mouse trailer */
-.trailer{
+.trailer {
   height: 40px;
   width: 40px;
   background-color: white;
@@ -170,10 +176,9 @@ body{
 
   font-size: 20px;
 }
-.card-bg:hover > .trailer{
+.card-bg:hover > .trailer {
   opacity: 1;
   cursor: none;
 }
 /* trailor */
-
 </style>

@@ -1,77 +1,42 @@
-<script setup lang='ts'>
-  import { type ProjectCardProps } from '~/types'
-  import { ref, type VNodeRef } from "vue"
-  import { cn } from "~/utils"
-  const {
-    classes,
-    description,
-    image,
-    path,
-    title
-  } = defineProps<ProjectCardProps>()
-  const parent = ref<VNodeRef | null>(null)
-  const urlPath = `/projects/${path.split('/')[path.split('/').length - 1]}`  
-  
-  const handleTrailer = (e: MouseEvent) => {
-    
-  if (parent.value) {
-    
-    if(parent.value.style.opacity !== ''){
-      parent.value.style.opacity = 1
-    }
-    const rect = parent.value.getBoundingClientRect()
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top
-    
-    parent.value.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.05) 0%, rgba(27,28,31,0) 100%)`
-  }
-}
-
-const handleRemove = () => {
-  if (parent.value) {
-    parent.value.style.opacity = 0
-  }
-}
+<script setup lang="ts">
+import { type ProjectCardProps } from "~/types";
+import { ref, type VNodeRef } from "vue";
+import { cn } from "~/utils";
+const { classes, description, image, path, title } =
+  defineProps<ProjectCardProps>();
+const parent = ref<VNodeRef | null>(null);
+const urlPath = `/projects/${path.split("/")[path.split("/").length - 1]}`;
 </script>
 
 <template>
   <NuxtLinkLocale
-  :href='urlPath'
-  :class="cn(
-    'p-3 flex flex-col gap-2 card-bg rounded-3xl slide relative w-full sm:w-full flex-grow overflow-hidden',
-    classes
-  )"
-  @mousemove="handleTrailer"
-  @mouseleave="handleRemove"
-  >
-  <div 
-    ref="parent"
-    class="absolute top-0 left-0 pointer-events-none w-full h-full transition-all duration-200"
-  />
-  <div
-    class='w-full aspect-video relative rounded-2xl overflow-hidden'
-    >
-        <NuxtImg
-          fill
-          :src='image'
-          :alt='`${title} project`'
-          class='object-cover absolute'
-        />
+    :href="urlPath"
+    :class="
+      cn(
+        ' flex flex-col gap-2 p-2 slide relative w-full sm:w-full flex-grow overflow-hidden text-[#211A14] border border-[#E84C3C]/50 hover:bg-[#E84C3C] duration-200 transition-all group',
+        classes
+      )
+    ">
+    <div
+      class="w-full aspect-video relative overflow-hidden border border-[#E84C3C]/50 group-hover:border-[#D6C9B9] transition-all duration-200">
+      <NuxtImg
+        fill
+        :src="image"
+        :alt="`${title} project`"
+        class="object-cover absolute z-10" />
+      <SvgsPattern
+        class="group-hover:text-[#D6C9B9] text-[#E84C3C] duration-200 transition-all scale-105" />
     </div>
-    <div 
-    class='flex py-2 px-4 gap-3 items-center z-10'
-    >
-        <!-- <FaRulerCombined class='icons'/> -->
-        <div>
-            <h3
-            class='font-semibold'
-            >
-                {{ title }}
-            </h3>
-            <p>
-                {{ description }}
-            </p>
-        </div>
+    <div class="flex pb-4 pt-2 px-4 gap-3 items-center z-10">
+      <!-- <FaRulerCombined class='icons'/> -->
+      <div class="group-hover:text-[#D6C9B9] transition-all duration-200">
+        <h3 class="font-semibold text-lg text-[FFB936]">
+          {{ title }}
+        </h3>
+        <p class="line-clamp-1 opacity-80">
+          {{ description }}
+        </p>
+      </div>
     </div>
   </NuxtLinkLocale>
 </template>

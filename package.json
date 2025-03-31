@@ -21,6 +21,8 @@
     "@vueuse/motion": "^2.2.6",
     "clsx": "^2.1.1",
     "nuxt": "^3.12.4",
+    "nuxt-directus": "^5.7.0",
+    "nuxt-security": "^2.2.0",
     "tailwind-merge": "^2.4.0",
     "vue": "latest"
   },

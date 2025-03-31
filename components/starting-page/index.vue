@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { helloTranslations } from '~/constants';
+import { ref, onMounted } from "vue";
+import { helloTranslations } from "~/constants";
 
 const props = defineProps<{ isActive: boolean }>();
-const emit = defineEmits(['update:isActive']);
+const emit = defineEmits(["update:isActive"]);
 
-const choosenWord = ref('');
+const choosenWord = ref("");
 let intervalId: NodeJS.Timeout | null = null;
 
 function displayTranslations() {
@@ -20,7 +20,7 @@ function displayTranslations() {
         clearInterval(intervalId);
       }
       document.body.style.overflow = "unset";
-      emit('update:isActive', false); // Emit event to update isActive
+      emit("update:isActive", false); // Emit event to update isActive
     }
   };
 
@@ -36,15 +36,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 w-full h-full bg-[#15161A] z-[1000] grid place-content-center">
-    <div
-      class="flex gap-3 items-center"
-    >
-      <div 
-        class="w-4 h-4 rounded-full bg-white"
-      />
-      <p class="text-5xl  text-white">
-        {{ choosenWord ? choosenWord : 'Hello' }}
+  <div
+    class="fixed top-0 left-0 w-full h-full bg-[#D6C9B9] z-[1000] grid place-content-center">
+    <div class="flex gap-3 items-center">
+      <div class="w-4 h-4 rounded-full bg-[#211A14]" />
+      <p class="text-5xl text-[#211A14]">
+        {{ choosenWord ? choosenWord : "Hello" }}
       </p>
     </div>
   </div>
